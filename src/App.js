@@ -37,7 +37,11 @@ function App() {
       if (todo.id === id && todo.done) {
         setTodo(todos.filter(todo => todo.id !== id))
       }
+      return true
+
     })
+    return true
+
   }
 
   const createTask = (task) => {
