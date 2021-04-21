@@ -1,38 +1,108 @@
-.App {
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
+body{
+  font-family: 'Montserrat', sans-serif;
+}
+
+.header{
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  font-size: 40px;
+}
+
+.header img {
+  width: 100px;
+}
+
+.task{
+  display: flex;
+  justify-content: space-between;
+  margin:  0 200px;
+  padding:  10px 20px;
+  background-color: rgb(192, 219, 241);
+border-radius: 20px;
+transition:  .3s;
+} 
+
+.task .btns input, 
+.task-done .btns input{
+  width :20px;
+  height: 20px;
+}
+
+
+.task:hover{
+  transform: scale(1.1);
+  transition:  .6s;
+  background-color: rgb(142, 163, 180);
+
+}
+
+.task-done{
+  display: flex;
+  justify-content: space-between;
+  margin:  0 200px;
+  padding:  10px 20px;
+  background-color: rgb(32, 110, 32) !important;
+  border-radius: 20px;
+transition:  .3s;
+color: white;
+}
+
+.task .cross,
+.task-done .cross{
+  width: 100px;
+  height: 30px;
+  
+}
+
+.task .btns,
+.task-done .btns{
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.form{
   text-align: center;
+  height: 100px;
+  padding-top: 50px;
+  margin-bottom: 30px;
+
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.form button{
+  width: 20%;
+  height: 30px;
+  border: none;
+  border-radius: 10px;
+  background-color: rgb(55, 95, 228);
+  color: white;
+  font-weight: bold;
+  outline: none;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.form-control{
+  margin-top: 20px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+}
+.form-control input{
+  width:400px;
+  height: 26px;
+  padding-left: 20px;
 }
 
-.App-link {
-  color: #61dafb;
-}
+@media (max-width: 900px){
+  .App{
+    transform: scale(.8);
+    margin: 0;
+    width: 100%;
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
   }
-  to {
-    transform: rotate(360deg);
-  }
+  .task{
+    margin:  0 ;
+  } 
 }
